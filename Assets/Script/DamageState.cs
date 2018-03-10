@@ -9,7 +9,10 @@ public class DamageState : StateMachineBehaviour {
         int hp = animator.GetInteger("Hp");
         hp--;
         animator.SetInteger("Hp", hp);
-        if(hp <= 0)
+
+        animator.transform.localScale.Set(hp, hp, hp);
+
+        if (hp <= 0)
         {
             animator.SetTrigger("Dead");
         }

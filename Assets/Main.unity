@@ -787,6 +787,7 @@ MonoBehaviour:
   scale: 1
   isDead: 0
   hpText: {fileID: 655651397}
+  regenDelta: 2
 --- !u!1 &1759770319
 GameObject:
   m_ObjectHideFlags: 0
