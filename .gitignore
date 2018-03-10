@@ -9,14 +9,10 @@ Desktop.ini
 $RECYCLE.BIN/
 
 #Workspace Stuff
-[Ll]ibrary/
 [Bb]uild/
 [Bb]uilds/
 Temp/
 Assets/AssetStoreTools*
-*.csproj
-*.sln
-*.meta
 
 # Windows Installer files
 *.cab
