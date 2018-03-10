@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour {
-    public int hp = 5;
+    public int hp = 20;
+    public int scale = 1;
     public bool isDead = false;
     public Text hpText;
 

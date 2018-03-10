@@ -27,6 +27,8 @@ public class FireManager : MonoBehaviour {
                 cameraTransform.forward * power;
 
             bazooka.SetTrigger("Shoot");
+
+            gameObject.GetComponent<PlayerState>().hp--;
         }
 	}
 }

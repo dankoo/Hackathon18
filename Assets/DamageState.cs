@@ -6,7 +6,7 @@ public class DamageState : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        int hp = animator.GetInteger("Hp");
+        int hp = animator.GetInteger("hp");
         hp--;
         animator.SetInteger("Hp", hp);
         if(hp <= 0)

@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 4019924640936862}
   - component: {fileID: 143363960518183318}
   - component: {fileID: 95938810178337492}
+  - component: {fileID: 114617490177635814}
   m_Layer: 0
   m_Name: PseudoSpider
   m_TagString: Spider
@@ -484,7 +485,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1274097541145830}
-  m_LocalRotation: {x: -0.54205495, y: -0.081092864, z: -0.62315273, w: 0.5579258}
+  m_LocalRotation: {x: -0.5420549, y: -0.08109286, z: -0.6231527, w: 0.55792576}
   m_LocalPosition: {x: -2.3849595, y: 0.5274393, z: 0.56281084}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
   m_Children:
@@ -604,7 +605,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1573066559017374}
-  m_LocalRotation: {x: 0.74437916, y: 0.51657706, z: 0.35783157, w: -0.22584143}
+  m_LocalRotation: {x: 0.7443792, y: 0.5165771, z: 0.3578316, w: -0.22584145}
   m_LocalPosition: {x: -2.3849595, y: -0.5274388, z: 0.5628106}
   m_LocalScale: {x: 1.0000005, y: 1.0000001, z: 1}
   m_Children:
@@ -871,6 +872,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114617490177635814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1492481649175848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc1439b6faab054c844122f77d27f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  isDead: 0
 --- !u!137 &137257595555388822
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -880,6 +894,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -895,6 +910,7 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

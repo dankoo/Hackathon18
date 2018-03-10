@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackState : StateMachineBehaviour {
     public Transform target;
-    public float attackDelay = 0.2f;
+    public float attackDelay = 10000.0f;
     float timeCounter = 0.0f;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

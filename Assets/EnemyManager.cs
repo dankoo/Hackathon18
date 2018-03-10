@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
-    public float spawnTime = 10.5f;
+    public float spawnTime = 50000;
     float timeCounter = 0.0f;
 
     public GameObject enemy;

@@ -9,10 +9,14 @@ Desktop.ini
 $RECYCLE.BIN/
 
 #Workspace Stuff
-Library/metadata/*
-Library/ShaderCache/*
-Temp/*
-
+Library/
+Temp/
+.vs/
+*.csproj
+*.sln
+UnityPackageManager/
+*.meta
+ProjectSettings/
 
 # Windows Installer files
 *.cab
