@@ -8,15 +8,28 @@ public class PlayerState : MonoBehaviour {
     public int scale = 1;
     public bool isDead = false;
     public Text hpText;
+    public float regenDelta = 2;
+    private float regenCounter = 0;
 
     void Start()
     {
         hpText.text = "My Health : " + hp;
     }
 
+    void Update()
+    {
+        regenCounter += Time.deltaTime;
+        if(!isDead && regenCounter > regenDelta && hp < 20)
+        {
+            HandleHp(1);
+            regenCounter = 0;
+        }
+    }
+
     public void HandleKill()
     {
         scale++;
+        transform.localScale = new Vector3(scale, scale, scale);
     }
 
     public void HandleHp(int inclement)
@@ -34,11 +47,6 @@ public class PlayerState : MonoBehaviour {
     {
         if (!isDead)
         {
-            if (scale > 1)
-            {
-                scale--;
-                transform.localScale = new Vector3(scale, scale, scale);
-            }
             HandleHp(-1);
         }
     }

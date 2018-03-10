@@ -10,17 +10,13 @@ $RECYCLE.BIN/
 
 #Workspace Stuff
 [Ll]ibrary/
-[Tt]emp/
-.vs/
 [Bb]uild/
 [Bb]uilds/
-[Oo]bj/
+Temp/
 Assets/AssetStoreTools*
 *.csproj
 *.sln
-UnityPackageManager/
 *.meta
-ProjectSettings/
 
 # Windows Installer files
 *.cab
