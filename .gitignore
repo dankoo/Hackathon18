@@ -9,9 +9,13 @@ Desktop.ini
 $RECYCLE.BIN/
 
 #Workspace Stuff
-Library/
-Temp/
+[Ll]ibrary/
+[Tt]emp/
 .vs/
+[Bb]uild/
+[Bb]uilds/
+[Oo]bj/
+Assets/AssetStoreTools*
 *.csproj
 *.sln
 UnityPackageManager/
