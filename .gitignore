@@ -13,6 +13,7 @@ $RECYCLE.BIN/
 [Bb]uilds/
 Temp/
 Assets/AssetStoreTools*
+*.log
 
 # Windows Installer files
 *.cab
