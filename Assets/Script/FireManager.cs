@@ -28,7 +28,7 @@ public class FireManager : MonoBehaviour {
 
             bazooka.SetTrigger("Shoot");
 
-            gameObject.GetComponent<PlayerState>().hp--;
+            GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
         }
 	}
 }

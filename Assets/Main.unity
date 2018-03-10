@@ -783,8 +783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1009049321907ea479572dc9007c5bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
-  scale: 0
+  hp: 20
+  scale: 1
   isDead: 0
   hpText: {fileID: 655651397}
 --- !u!1 &1759770319

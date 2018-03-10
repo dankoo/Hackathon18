@@ -19,36 +19,34 @@ public class CharacterMove : MonoBehaviour {
         characterController = GetComponent<CharacterController>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        if (gameObject.GetComponent<PlayerState>().isDead)
+	// Call on physics update
+	void FixedUpdate () {
+        if (!gameObject.GetComponent<PlayerState>().isDead)
         {
-            return;
+
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 moveDirection = new Vector3(x, 0, z);
+            moveDirection =
+                cameraTransform.TransformDirection(moveDirection);
+            moveDirection *= moveSpeed;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                yVelocity = jumpSpeed;
+            }
+
+            yVelocity += gravity * Time.deltaTime;
+            moveDirection.y = yVelocity;
+
+            characterController.Move(moveDirection * Time.deltaTime);
+
+            if (characterController.collisionFlags
+                == CollisionFlags.Below)
+            {
+                yVelocity = 0.0f;
+            }
         }
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 moveDirection = new Vector3(x, 0, z);
-        moveDirection = 
-            cameraTransform.TransformDirection(moveDirection);
-        moveDirection *= moveSpeed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            yVelocity = jumpSpeed;
-        }
-
-        yVelocity += gravity * Time.deltaTime;
-        moveDirection.y = yVelocity;
-
-        characterController.Move(moveDirection * Time.deltaTime);
-        
-        if (characterController.collisionFlags 
-            == CollisionFlags.Below)
-        {
-            yVelocity = 0.0f;
-        }
-
 	}
 }

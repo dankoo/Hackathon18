@@ -14,16 +14,32 @@ public class PlayerState : MonoBehaviour {
         hpText.text = "My Health : " + hp;
     }
 
-	public void DamageByEnemy()
+    public void HandleKill()
     {
-        if (isDead) return;
-        hp--;
-        hpText.text = "My Health : " + hp;
+        scale++;
+    }
 
+    public void HandleHp(int inclement)
+    {
+        hp+= inclement;
+        hpText.text = "My Health : " + hp;
         if (hp <= 0)
         {
             isDead = true;
-            hpText.text = "GameOver";
+            hpText.text = "Game Over";
+        }
+    }
+
+	public void DamageByEnemy()
+    {
+        if (!isDead)
+        {
+            if (scale > 1)
+            {
+                scale--;
+                transform.localScale = new Vector3(scale, scale, scale);
+            }
+            HandleHp(-1);
         }
     }
 }
