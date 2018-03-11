@@ -28,7 +28,15 @@ public class FireManager : MonoBehaviour {
 
             bazooka.SetTrigger("Shoot");
 
+<<<<<<< HEAD
+            if (lostLife == 2)
+            {
+                //GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
+                lostLife = 0; 
+            }
+=======
            GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
+>>>>>>> parent of 0dd76b5... Add player collider
         }
 	}
 }

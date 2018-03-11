@@ -289,6 +289,7 @@
     <Compile Include="Assets\Script\CharacterMove.cs" />
     <Compile Include="Assets\Script\DamageState.cs" />
     <Compile Include="Assets\Script\DeathState.cs" />
+    <Compile Include="Assets\Script\EatenState.cs" />
     <Compile Include="Assets\Script\EnemyManager.cs" />
     <Compile Include="Assets\Script\FireManager.cs" />
     <Compile Include="Assets\Script\IdleState.cs" />
