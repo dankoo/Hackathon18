@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour {
     public int hp = 20;
-    public int scale = 1;
+    public float scale = 1;
     public bool isDead = false;
     public Text hpText;
     public float regenDelta = 2;
@@ -28,7 +28,7 @@ public class PlayerState : MonoBehaviour {
 
     public void HandleKill()
     {
-        scale++;
+        scale += 0.02f;
         transform.localScale = new Vector3(scale, scale, scale);
     }
 

@@ -11,8 +11,8 @@ public class Bomb : MonoBehaviour {
             transform.position, Quaternion.identity);
         if (col.gameObject.tag.Contains("Spider"))
         {
-            col.gameObject.
-                GetComponent<Animator>().SetTrigger("Damage");
+            col.gameObject.GetComponent<Animator>().SetTrigger("Damage");
+            col.gameObject.GetComponent<SpiderState>().HanbleDamage();
         }
 
         Destroy(gameObject);
