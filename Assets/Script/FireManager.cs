@@ -31,7 +31,7 @@ public class FireManager : MonoBehaviour {
 
             if (lostLife == 2)
             {
-                GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
+                //GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
                 lostLife = 0; 
             }
         }

@@ -26,17 +26,6 @@ public class PlayerState : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag.Contains("Spider"))
-        {
-            Destroy(col.gameObject);
-            HandleKill();
-        }
-
-        Destroy(gameObject);
-    }
-
     public void HandleKill()
     {
         scale += 0.02f;
