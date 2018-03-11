@@ -7,7 +7,7 @@ public class FireManager : MonoBehaviour {
     public GameObject fireObject;
     public Transform firePosition;
     public float power = 20.0f;
-
+    public int lostLife = 0;
     public Animator bazooka;
 
 	void Update () {
@@ -27,8 +27,13 @@ public class FireManager : MonoBehaviour {
                 cameraTransform.forward * power;
 
             bazooka.SetTrigger("Shoot");
+            lostLife++;
 
-           GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
+            if (lostLife == 2)
+            {
+                GameObject.Find("Player").GetComponent<PlayerState>().HandleHp(-1);
+                lostLife = 0; 
+            }
         }
 	}
 }

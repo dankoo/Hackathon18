@@ -5,7 +5,7 @@ using UnityEngine;
 public class WalkState : StateMachineBehaviour {
     Transform target;
 
-    public float speed = 5.0f;
+    public float speed = 250.0f;
     public float rotationSpeed = 10.0f;
 
     CharacterController _controller;
